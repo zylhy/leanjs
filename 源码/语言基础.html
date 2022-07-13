@@ -1,0 +1,384 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+    </body>
+
+    <script>
+        // let var 
+    //         function test(){
+    //     if(true){
+    //         let name = 'bob'
+    //     console.log(name,1)
+    //     }
+    //     console.log(name,2)
+
+    //     if(true){
+    //         var name1 = 'cob'
+    //     console.log(name1,1)
+
+    //     }
+    //     console.log(name1,2)
+    //  }
+
+    //  test()
+    // console.log(name);
+    // // console.log(age);
+    // var name ='bob';
+    // console.log(name);
+    // let age =18
+    // console.log(age);
+
+    // window 对象
+    // let  name = 'bob'
+    // var age = 18
+    // console.log(window.name)
+    // console.log(window.age)
+    // var name = 'Matt'; 
+    // console.log(window.name); // 'Matt' 
+    // let age = 26; 
+    // console.log(window.age); // undefined 
+
+    //typeof
+    // let name = 'bob', age = 18  
+    // console.log(typeof name) 
+    // console.log(typeof(name))
+    // console.log(typeof age) 
+
+    // 值的范围
+    // console.log(Number.MAX_VALUE)
+    // console.log(Number.MIN_VALUE)
+    //NaN
+    // console.log(-0)
+    // console.log(-0/0)
+    // console.log(0/0)
+    // console.log(NaN==NaN)
+    // console.log(isNaN(NaN)) 
+    // console.log(isNaN(10))
+    // console.log(isNaN('10'))
+    //数值转换
+    //  console.log(Number(true))   //1  
+    //  console.log(Number(false))   //0
+    //  console.log(Number(10))   //10  
+    //  console.log(Number(010))   //8
+    //  console.log(Number(0x1f))    //31
+    //  console.log(Number(null))   //0
+    //  console.log(Number(undefined))  //NaN  
+    //  console.log(Number('hello'))    //NaN
+    //  console.log(Number(''))    //0
+    //  console.log(Number('0x1f'))    //31
+    //  console.log(Number('010'))    //10 
+    //  console.log(Number('10'))    //10 
+    //  console.log(Number('00.10'))    //0.1
+    //  console.log(Number('00.10.1'))    //NaN
+    // const bob = {
+    //     name : 'bob',
+    //     age :18,
+    //     height:1.8
+    // }
+
+    // console.log(   valueOf(bob))
+    // console.log(Number(bob))
+
+    // parseInt
+    // console.log(parseInt('0x1f',16))     // 31 
+    // console.log(parseInt(22.5))   // 22
+    // console.log(parseInt("123baf"))   // 123
+
+    // parseFloat
+    // console.log(parseFloat("0x1f"))   //0 
+    // console.log(parseFloat('0000054.00'))   //54 
+    // console.log(parseFloat(12.2))   //12.2 
+    // console.log(parseFloat(0x1f))   //31
+
+    // toString 
+    // let a = 12
+    // let b =a.toString()
+    // console.log(typeof b)  //string
+
+    // let num = 10; 
+    // console.log(num.toString()); // "10" 
+    // console.log(num.toString(2)); // "1010" 
+    // console.log(num.toString(8)); // "12" 
+    // console.log(num.toString(10)); // "10" 
+    // console.log(num.toString(16)); // "a" 
+
+    //模板字面量
+    // let a  = `first 
+    // second`
+    // let b = 'first\nsecond'
+    // let c = 'first second'
+    // console.log(a)
+    // console.log(b)
+    // console.log(c)
+    // let a = 5 
+    // let b = `${a} to the second power is ${a*a}`  
+    // console.log(b)    //5 to the second power is 25
+
+
+    // function capitalize(word) { 
+    //  return `${ word[0].toUpperCase() }${ word.slice(1) }`; 
+    // } 
+    // console.log(`${ capitalize('hello') }, ${ capitalize('world') }!`); // Hello, World! 
+    // let a  =  ''
+    // function add(){
+    //     a = `${a}abc1`
+    //   console.log(a)  
+    // }
+    // add()  //abc1
+    // add()  //abc1abc1
+    // add()   // abc1abc1abc1
+    // add()  //abc1abc1abc1abc1
+
+    // let a = 6; 
+    // let b = 9; 
+    // function simpleTag(strings, aValExpression, bValExpression, sumExpression) { 
+    //  console.log(strings); 
+    //  console.log(aValExpression); 
+    //  console.log(bValExpression); 
+    //  console.log(sumExpression); 
+    //  return 'foobar'; 
+    // } 
+    // let untaggedResult = `${ a } + ${ b } = ${ a + b }`; 
+    // let taggedResult = simpleTag`${ a } + ${ b } = ${ a + b }`; 
+    // // ["", " + ", " = ", ""] 
+    // // 6 
+    // // 9 
+    // // 15 
+    // console.log(untaggedResult); // "6 + 9 = 15" 
+    // console.log(taggedResult); // "foobar" 
+
+    // let a = 1
+    // let b = 2
+    // function foo(strings){
+    // console.log(strings)
+    // }
+    // foo`${a}`     // ['','']
+    // foo`aa${a}`   // ['aa','']
+    // foo`${a}bb`   // ['','bb']
+    // foo`aa${a}bb` // ['aa','bb'] 
+
+    // function foo(strings, aval,bval){
+    //     console.log(strings)  // ['aa','+','bb']
+    //     console.log(aval)   //1
+    //     console.log(bval)  //2
+    // }
+
+    // function foo(strings,...arg){
+    // console.log(strings)  // ['aa','+','bb']
+    // console.log(arg)      //   [1,2]
+    // }
+
+    // foo`aa${a}+${b}bb`
+    // let a = 6; 
+    // let b = 9; 
+    // function zipTag(strings, ...expressions) { 
+    //  return strings[0] + 
+    //  expressions.map((e, i) => `${e}${strings[i + 1]}`) 
+    //  .join(''); 
+    // } 
+    // let untaggedResult = `${ a } + ${ b } = ${ a + b }`; 
+    // let taggedResult = zipTag`${ a } + ${ b } = ${ a + b }`; 
+    // console.log(untaggedResult); // "6 + 9 = 15" 
+    // console.log(taggedResult); // "6 + 9 = 15" 
+
+    // console.log(`\u00A9`)   // ©
+    // console.log(String.raw`\u00A9`)   // \u00A9
+
+    // console.log(`first \n second`)  //   first
+    //                                 //  second
+    // console.log(String.raw`first \n second`)  //   first \n second
+    // console.log(String.raw`first 
+    // second`)                       //  first
+    //                                 //  second
+
+    //  let a = Symbol()
+    //  console.log(a)          //Symbol()
+    //  console.log(typeof a)    // symbol
+    //  let b = Symbol('c')     
+    //  console.log(b)          //Symbol(c)
+    //  console.log(typeof b)    // symbol
+
+    // let genericSymbol = Symbol(); 
+    // let otherGenericSymbol = Symbol(); 
+    // let fooSymbol = Symbol('foo'); 
+    // let otherFooSymbol = Symbol('foo'); 
+    // console.log(genericSymbol == otherGenericSymbol); // false 
+    // console.log(fooSymbol == otherFooSymbol);  // false 
+
+    // let myBoolean = new Boolean(); 
+    // console.log(typeof myBoolean); // "object" 
+    // let myString = new String(); 
+    // console.log(typeof myString); // "object" 
+    // let myNumber = new Number(); 
+    // console.log(typeof myNumber); // "object" 
+    // let mySymbol = new Symbol(); // TypeError: Symbol is not a constructor 
+
+    // let mySymbol = Symbol(); 
+    // let myWrappedSymbol = Object(mySymbol); 
+    // console.log(typeof myWrappedSymbol); // "object" 
+
+    // let a = Symbol('a')
+    // let a1 = Symbol('a')
+    // console.log(a==a1)   //false
+
+    // let a =Symbol.for('a')
+    // let a1 =Symbol.for('a')
+    // let b = Symbol()
+    // console.log(a==a1)   //true
+    // console.log(Symbol.keyFor(a1))   //a 
+    // console.log(Symbol.keyFor(a))  //a
+    // console.log(Symbol.keyFor(b))  //undefined
+
+    // let s1 = Symbol('foo'), 
+    //  s2 = Symbol('bar'), 
+    //  s3 = Symbol('baz'), 
+    //  s4 = Symbol('qux'); 
+    //  s5 = Symbol('fag'); 
+    // let o = { 
+    //  [s1]: 'foo val' ,
+    //  [s2] :'bar val'
+    // }; 
+    // let o ={}
+    // o[s1] = 'foo val';
+    // o[s2] = 'bar val'
+    // Object.defineProperty(o,s3,{value:'baz'})
+    // Object.defineProperties(o,{[s4]:{value:'qux'},[s5]:{value:'fag'}})
+
+//     let s1 = Symbol('foo'),
+//         s2 = Symbol('bar');
+//     let o = {
+//         [s1]: 'foo val',
+//         [s2]: 'bar val',
+//         baz: 'baz val',
+//         qux: 'qux val'
+//     };
+//     console.log(Object.getOwnPropertySymbols(o));    // 返回该对象里面的符号属性
+//     // [Symbol(foo), Symbol(bar)] 
+//     console.log(Object.getOwnPropertyNames(o));     //返回该对象里面的常规属性
+//     // ["baz", "qux"] 
+//     console.log(Object.getOwnPropertyDescriptors(o));  //返回所有属性
+//     // {baz: {...}, qux: {...}, Symbol(foo): {...}, Symbol(bar): {...}} 
+//     console.log(Reflect.ownKeys(o));    // 返回所有属性的key
+// // ["baz", "qux", Symbol(foo), Symbol(bar)] 
+
+
+// let o = { 
+//  [Symbol('foo')]: 'foo val', 
+//  [Symbol('bar')]: 'bar val' 
+// }; 
+// console.log(o); 
+// // {Symbol(foo): "foo val", Symbol(bar): "bar val"} 
+// let barSymbol = Object.getOwnPropertySymbols(o) 
+//  .find((symbol) => symbol.toString().match(/bar/)); 
+// console.log(barSymbol); 
+// // Symbol(bar) 
+
+//一元操作符
+// let a = 2
+// let b = 3 
+// let  c = --a +b;  
+// let d = a + b    
+// console.log(c)   // 4 
+// console.log(d)   // 4
+
+// let a = 2
+// let b = 3 
+// let  c = a-- + b;  
+// let d = a + b    
+// console.log(c)   // 5 
+// console.log(d)   // 4
+
+// let a = '123'
+// console.log(++a)    // 124
+// console.log(typeof ++a) // number
+
+// let a = 'abc'
+// console.log(++a)    // NaN
+// console.log(typeof ++a) // number 
+
+// let a = false;
+// let b =true;
+// console.log(++a)  //1
+// console.log(++b)  //2
+// console.log(typeof ++a)  //number 
+// console.log(typeof ++b)  //number
+    
+// let s1 = "01"; 
+// let s2 = "1.1"; 
+// let s3 = "z"; 
+// let b = false; 
+// let f = 1.1; 
+// let o = { 
+//  valueOf() { 
+//  return -1; 
+//  } 
+// }; 
+// s1 = +s1; // 值变成数值 1 
+// s2 = +s2; // 值变成数值 1.1 
+// s3 = +s3; // 值变成 NaN 
+// b = +b; // 值变成数值 0 
+// f = +f; // 不变，还是 1.1 
+// o = +o; // 值变成数值-1
+    // console.log(1=='1')
+    // console.log(1==='1')
+
+    //位操作符
+// let a = -18;
+// console.log(a.toString(2)) // -10010
+// let a =25
+// let b =3 
+// let result= a^b
+// console.log(result)   //26
+
+// let a = 2;
+// let b = a <<5
+// console.log(a.toString(2))   //10
+// console.log(b.toString(2))   //1000000
+// console.log(b)              //64
+
+// let a = 64 
+// let b = a>>5
+// console.log(a.toString(2))   //1000000
+// console.log(b.toString(2))   //10
+// console.log(b)              //2
+
+//逻辑与
+// let a ={}
+// let b = 1 
+// let result =a && b
+// console.log(result)  // 1
+
+// let a = true;
+// let b = {}
+// let c = false;
+// let result1 = a && b
+// let result2 = c && b
+
+// console.log(result1)  // {}
+// console.log(result2)  // false
+// let a = {name:'a'},b={name:'b'}
+// console.log(a&&b)   // {name:'b'}
+
+// console.log(undefined&&true)    // undefined
+// console.log(null&&true)    //null
+// console.log(NaN&&true)   //NaN
+
+// 逻辑或
+// console.log({}||1)  // {}
+// console.log(false||1)   //1
+console.log(undefined||undefined)  //undefined
+console.log(null||null)   //null
+console.log(NaN||NaN) //NaN
+    </script>
+
+    </html>
